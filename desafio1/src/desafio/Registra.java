@@ -19,20 +19,20 @@ public class Registra {
 
 		List<Integer> list = new ArrayList<>();
 
-		System.out.print("Digite a quantidade de números ou digite 0 para quantidade default ("
-				+ QUANTIDADE_DE_NUMEROS_DEFAULT + "): ");
-		int quantidadeDeNumeros = scan.nextInt();
+		System.out.print(
+				"Digite a quantidade de números, (0 = quantidade default (" + QUANTIDADE_DE_NUMEROS_DEFAULT + ")): ");
+		int quantidadeDeNumeros = scan.nextInt(); // Salva a quantidade de números
 		if (quantidadeDeNumeros == 0) {
-			quantidadeDeNumeros = QUANTIDADE_DE_NUMEROS_DEFAULT;
+			quantidadeDeNumeros = QUANTIDADE_DE_NUMEROS_DEFAULT; // Se digitar 0 vai para a quantidade default
 		}
 
-		System.out.print("Digite o nome do arquivo ou digite 0 para o nome default (" + NOME_ARQUIVO_DEFAULT + "): ");
-		String nomeArquivo = scan.next();
+		System.out.print("Digite o nome do arquivo, (0 = nome default (" + NOME_ARQUIVO_DEFAULT + ")): ");
+		String nomeArquivo = scan.next(); // Salva o nome do arquivo
 		if (nomeArquivo.equals("0")) {
-			nomeArquivo = NOME_ARQUIVO_DEFAULT;
+			nomeArquivo = NOME_ARQUIVO_DEFAULT; // Se digitar 0 vai para o nome default
 		}
 
-		entradaDeDadosEValidacao(scan, list, quantidadeDeNumeros);
+		entradaDeDadosEValidacao(scan, list, quantidadeDeNumeros); // Entrada dos números, validação deles e adcionar na lista
 
 		Escritor[] escritores = { new EscritorTxt(nomeArquivo, quantidadeDeNumeros),
 				new EscritorExcel(nomeArquivo, quantidadeDeNumeros) };
@@ -52,8 +52,7 @@ public class Registra {
 			boolean valida = false;
 			System.out.print("Digite o " + (i) + "° número: ");
 
-			if (scan.hasNextInt()) { // Se o número for inteiro, salva ele na variável leitura e converte para
-										// inteiro
+			if (scan.hasNextInt()) { // Se o número for inteiro, salva ele na variável leitura e converte para inteiro
 				leitura = scan.next();
 				int valor = Integer.parseInt(leitura);
 

@@ -6,7 +6,8 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.List;
 
-public class EscritorTxt extends Calculos implements Escritor {
+public class EscritorTxt extends Calculos implements Escritor { // Classe que herda todos os métodos de Calculos e
+																// implementa todos os métodos do Escritor
 
 	private FileWriter arquivo;
 	private PrintWriter gravarArquivo;

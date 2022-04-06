@@ -2,7 +2,7 @@ package desafio;
 
 import java.util.List;
 
-public abstract class Calculos {
+public abstract class Calculos { // Classe abstrata para não ser instânciada
 
 	// Método para calcular média
 	protected double calculaMedia(List<Integer> numeros) {

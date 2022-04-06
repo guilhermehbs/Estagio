@@ -11,23 +11,23 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 
-public class EscritorExcel extends Calculos implements Escritor {
+public class EscritorExcel extends Calculos implements Escritor { // Classe que herda todos os métodos de Calculos e
+																	// implementa todos os métodos do Escritor
 
 	private XSSFWorkbook workbook;
 	private XSSFSheet sheet;
 	private FileOutputStream fileOutput;
 
 	public EscritorExcel(String nomeArquivo, int quantidadeDeNumeros) throws FileNotFoundException {
-		fileOutput = new FileOutputStream(nomeArquivo + ".xlsx"); // Grava o arquivo excel
 		workbook = new XSSFWorkbook(); // Cria a planilha excel
 		sheet = workbook.createSheet("SaídaExcel");
+		fileOutput = new FileOutputStream(nomeArquivo + ".xlsx"); // Grava o arquivo excel
 	}
 
 	public void escreverSaida(List<Integer> numeros) throws IOException {
 		try {
 			for (int posicao = 0; posicao < numeros.size(); posicao++) {
-				criarCelulaDaTabela(posicao, String.valueOf(numeros.get(posicao))); // Cria células para armazenar os
-																					// números
+				criarCelulaDaTabela(posicao, String.valueOf(numeros.get(posicao))); // Cria células para armazenar os números
 			}
 
 			String media = "Média: " + this.calculaMedia(numeros);
@@ -45,8 +45,8 @@ public class EscritorExcel extends Calculos implements Escritor {
 
 	// Método para criar células na tabela do excel
 	private void criarCelulaDaTabela(int posicao, String valor) {
-		XSSFRow row = sheet.createRow(posicao);
-		XSSFCell cell = row.createCell(0);
-		cell.setCellValue(valor);
+		XSSFRow row = sheet.createRow(posicao); // Define linha na tabela
+		XSSFCell cell = row.createCell(0); // Define coluna na tabela
+		cell.setCellValue(valor); // Define o que deve ser escrito na tabela
 	}
 }
