@@ -2193,3 +2193,24 @@ org.eclipse.core.runtime.CoreException: Launch configuration Programa references
 2022-04-06 11:46:20,404 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\guilherme.silva\eclipse-workspace\desafio\src\main\resources
 2022-04-06 11:46:20,405 [Worker-52: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-04-06 11:46:20,406 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\guilherme.silva\eclipse-workspace\desafio\src\test\resources
+2022-04-06 12:29:29,243 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-04-06 12:29:30,660 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-06 12:29:30,663 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\guilherme.silva\Programa de Estágio\eclipse-workspace\desafio\src\main\resources
+2022-04-06 12:29:30,666 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-06 12:29:30,668 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\guilherme.silva\Programa de Estágio\eclipse-workspace\desafio\src\test\resources
+2022-04-06 12:29:31,792 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-06 12:29:31,793 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\guilherme.silva\Programa de Estágio\eclipse-workspace\desafio\src\main\resources
+2022-04-06 12:29:31,794 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-06 12:29:31,796 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\guilherme.silva\Programa de Estágio\eclipse-workspace\desafio\src\test\resources
+2022-04-06 12:30:41,227 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-06 12:30:41,230 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\guilherme.silva\Programa de Estágio\eclipse-workspace\desafio\src\main\resources
+2022-04-06 12:30:41,232 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-06 12:30:41,236 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\guilherme.silva\Programa de Estágio\eclipse-workspace\desafio\src\test\resources
+2022-04-06 12:31:02,093 [Worker-11: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: desafio:desafio:0.0.1-SNAPSHOT @ C:\Users\guilherme.silva\Programa de Estágio\eclipse-workspace\desafio1\pom.xml.
+2022-04-06 12:31:02,344 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-06 12:31:02,346 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\guilherme.silva\Programa de Estágio\eclipse-workspace\desafio1\src\main\resources
+2022-04-06 12:31:02,347 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-06 12:31:02,351 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\guilherme.silva\Programa de Estágio\eclipse-workspace\desafio1\src\test\resources
+2022-04-06 12:31:03,483 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-04-06 12:31:03,485 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\guilherme.silva\Programa de Estágio\eclipse-workspace\desafio1\src\main\resources
+2022-04-06 12:31:03,486 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
