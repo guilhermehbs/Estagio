@@ -1,0 +1,25 @@
+package desafio;
+
+
+public abstract class Calculos {
+	
+	private int[] numeros;
+	private int contador;
+	
+	protected Calculos(int quantidadeDeNumeros) {
+		numeros = new int[quantidadeDeNumeros];
+		contador = 0;
+	}
+	
+	private void registra(int numero) {
+		numeros[contador] = numero;
+		contador++;
+	}
+	
+	private double calculaMedia() {
+		double soma = 0;
+		for (int numero : numeros) soma += numero;
+		return soma / contador;
+	}
+
+}

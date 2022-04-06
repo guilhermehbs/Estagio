@@ -1,0 +1,10 @@
+package desafio;
+
+import java.io.IOException;
+
+public interface Escritor {
+	
+	public void escreverSaida(int numeros)throws IOException;
+
+	abstract public int getContador();
+}

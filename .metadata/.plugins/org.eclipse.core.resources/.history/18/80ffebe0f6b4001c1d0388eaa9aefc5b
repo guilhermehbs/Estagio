@@ -1,0 +1,54 @@
+package desafio;
+
+import java.io.IOException;
+
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class Registra {
+	
+	private static final String NOME_ARUQUIVO_DEFAULT = "Saida";
+	private static final int QUANTIDADE_DE_NUMEROS_DEFAULT = 5;
+
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+		String leitura = "";
+		
+		Scanner scan = new Scanner(System.in);
+		
+		List<Integer> list = new ArrayList<>();
+		
+		System.out.print("Digite a quantidade de números ou digite 0 para quantidade default(" + QUANTIDADE_DE_NUMEROS_DEFAULT + "): ");
+		int quantidadeDeNumeros = scan.nextInt();
+		if(quantidadeDeNumeros==0) {
+			quantidadeDeNumeros = QUANTIDADE_DE_NUMEROS_DEFAULT;
+		}
+		System.out.print("Digite o nome do arquivo ou digite 0 para o nome default(" + NOME_ARUQUIVO_DEFAULT + "): ");
+		String nomeArquivo = scan.next();
+		if(nomeArquivo.equals("0")) {
+			nomeArquivo = NOME_ARUQUIVO_DEFAULT;
+		}
+	
+		Escritor[] escritores = {new SaidaTxt(nomeArquivo, quantidadeDeNumeros), new SaidaExcel(nomeArquivo, quantidadeDeNumeros)};
+
+		for(int i=1; i<=quantidadeDeNumeros; i++) {
+			
+			System.out.print("Digite o " + (i) + "° número: ");
+			leitura = scan.next();
+			int valor = Integer.parseInt(leitura);
+			
+			list.add(valor);
+
+		}
+		for(Escritor escritor : escritores) {
+			escritor.escreverSaida(lis);
+		}
+		
+		System.out.println("Números digitados: " + list);
+		
+
+	}
+
+}

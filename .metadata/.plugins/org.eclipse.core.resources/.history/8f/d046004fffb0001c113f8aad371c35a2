@@ -1,0 +1,33 @@
+
+package desafio1;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+public class SaidaTxt extends CalculoMedia implements EscreverArquivos {
+
+	@Override
+	public void escreverTexto() {
+		try (
+				
+			//Cria um novo arquivo txt:
+			FileWriter escreverArquivo = new FileWriter("saida.txt");
+				
+				
+			PrintWriter gravarArquivo = new PrintWriter(escreverArquivo);
+			){
+			
+			//Escreve no arquivo txt:
+			gravarArquivo.println(CalculoMedia.getMedia());
+			
+			//Fecha a parte de escrever arquivos:
+			escreverArquivo.close();
+
+		} catch (IOException e) {
+			//Mostra no console em caso de erro:
+			e.printStackTrace();
+		}
+	}
+}

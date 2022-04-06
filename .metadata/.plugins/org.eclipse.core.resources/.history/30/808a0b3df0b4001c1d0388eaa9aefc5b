@@ -1,0 +1,12 @@
+package desafio;
+
+import java.io.IOException;
+
+public interface Escritor {
+	
+	final String nomeDoArquivo = "Saida";
+	final int quantidadeDeNumeros = 5;
+	public void escreverSaida(int numeros)throws IOException;
+
+	
+}

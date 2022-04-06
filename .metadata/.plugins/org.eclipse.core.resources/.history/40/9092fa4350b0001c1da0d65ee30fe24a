@@ -1,0 +1,33 @@
+
+package desafio1;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+public class SaidaTxt extends CalculoMedia implements EscreverArquivos {
+
+	@Override
+		public void escreverTexto(String caminhoArquivo , String textoEscrito) {
+
+			try(
+				FileWriter escreverArquivo = new FileWriter(caminhoArquivo, false);
+				PrintWriter gravarArquivo = new PrintWriter(escreverArquivo);
+				){
+				
+				gravarArquivo.append(textoEscrito);
+				
+			}catch(IOException e) {
+				System.out.println("");
+			}
+		}
+
+	public static void main(String[] args) throws IOException {
+
+		ArrayList<Integer> list = Entrada.main(args);
+
+		EscreverArquivos.escreverTexto("Saída.txt", "Números digigitados: " + list);
+
+	}
+}

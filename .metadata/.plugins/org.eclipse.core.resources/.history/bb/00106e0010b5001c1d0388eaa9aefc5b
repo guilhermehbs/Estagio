@@ -1,0 +1,14 @@
+package desafio;
+
+import java.util.List;
+
+public abstract class Calculos {
+	
+	protected double calculaMedia(List<Integer> numeros) {
+		double soma = 0;
+		for (int numero : numeros) {
+			soma += numero;
+		}
+		return soma/numeros.size();
+	}
+}

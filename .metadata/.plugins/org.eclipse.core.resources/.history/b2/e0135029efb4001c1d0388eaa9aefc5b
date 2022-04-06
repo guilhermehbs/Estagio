@@ -1,0 +1,36 @@
+package desafio;
+
+
+public abstract class Calculos {
+	
+//	private int[] numeros;
+//	private int contador;
+	
+//	protected Calculos(int quantidadeDeNumeros) {
+//		numeros = new int[quantidadeDeNumeros];
+//		contador = 0;
+//	}
+	
+//	protected void contador(int numero) {
+//		numeros[contador] = numero;
+//		contador++;
+//	}
+	
+	protected static double calculaMedia(int[] numeros) {
+		double soma = 0;
+		for (int numero : numeros) {
+			soma += numero;
+		}
+		return soma/numeros.length;
+	}
+	public static void main(String[] args) {
+		int[] numeros = {10, 10, 10};
+		
+		System.out.println(calculaMedia(numeros));
+	}
+	
+//	protected int getContador() {
+//		return contador;
+//	}
+
+}

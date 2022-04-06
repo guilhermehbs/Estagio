@@ -1,0 +1,52 @@
+package desafio;
+
+import java.io.IOException;
+
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class Registra {
+	
+	private static final String NOME_ARUQUIVO_DEFAULT = "Saida";
+	private static final int QUANTIDADE_DE_NUMEROS_DEFAULT = 5;
+
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+		String leitura = "";
+		
+		Scanner scan = new Scanner(System.in);
+		
+		ArrayList<Integer> list = new ArrayList<>();
+		
+		System.out.print("Digite a quantidade de números ou digite 0 para quantidade default: ");
+		int quantidadeDeNumeros = scan.nextInt();
+		if(quantidadeDeNumeros==0) {
+			quantidadeDeNumeros = QUANTIDADE_DE_NUMEROS_DEFAULT;
+		}
+		System.out.print("Digite o nome do arquivo: ");
+		String nomeArquivo = scan.next();
+		if(nomeArquivo.equals("\n"))
+			System.out.println("nome: " + nomeArquivo);
+		if(quantidadeDeNumeros==0) {
+			quantidadeDeNumeros = QUANTIDADE_DE_NUMEROS_DEFAULT;
+		}
+
+		
+		for(int i=1; i<=quantidadeDeNumeros; i++) {
+			
+			System.out.print("Digite o " + (i) + "° número: ");
+			leitura = scan.next();
+			
+			list.add(Integer.parseInt(leitura));
+		}
+		
+		
+		Escritor[] escritores = {new SaidaTxt("Saída", quantidadeDeNumeros), new SaidaExcel("Saída", quantidadeDeNumeros)};
+		
+		System.out.println("Números digitados: " + list);
+		
+
+	}
+
+}

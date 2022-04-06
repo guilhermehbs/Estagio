@@ -1,0 +1,49 @@
+package desafio;
+
+import java.io.IOException;
+import java.util.List;
+import java.io.FileOutputStream;
+import java.io.FileNotFoundException;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+
+public class SaidaExcel extends Calculos implements Escritor {
+
+	private XSSFWorkbook workbook;
+	private XSSFSheet sheet;
+	private FileOutputStream fileOutput;
+
+	public SaidaExcel(String nomeArquivo, int quantidadeDeNumeros) throws FileNotFoundException {
+		fileOutput = new FileOutputStream(nomeArquivo + ".xlsx");
+		workbook = new XSSFWorkbook();
+		sheet = workbook.createSheet("SaídaExcel");
+	}
+
+	public void escreverSaida(List<Integer> numeros) throws IOException {
+		try {
+			for (int posicao = 0; posicao < numeros.size(); posicao++) {
+				criarCelulaDaTabela(posicao, String.valueOf(numeros.get(posicao)));
+			}
+
+			String media = "Média: " + this.calculaMedia(numeros);
+			criarCelulaDaTabela(numeros.size(), media);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			workbook.write(fileOutput);
+			fileOutput.flush();
+			fileOutput.close();
+		}
+
+	}
+
+	private void criarCelulaDaTabela(int posicao, String value) {
+		XSSFRow row = sheet.createRow(posicao);
+		XSSFCell cell = row.createCell(0);
+		cell.setCellValue(value);
+	}
+}

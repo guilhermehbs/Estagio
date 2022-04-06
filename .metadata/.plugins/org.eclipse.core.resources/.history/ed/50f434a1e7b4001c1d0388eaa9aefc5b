@@ -1,0 +1,41 @@
+package desafio;
+
+import java.io.IOException;
+
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class Registra {
+
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+		String leitura = "";
+		
+		Scanner scan = new Scanner(System.in);
+		
+		ArrayList<Integer> list = new ArrayList<>();
+		
+		System.out.print("Quantos números vão ser digitados? ");
+		int quantidadeDeNumeros = scan.nextInt();
+		
+		for(int i=1; i<=quantidadeDeNumeros; i++) {
+			
+			System.out.print("Digite o " + (i) + "° número: ");
+			leitura = scan.next();
+			
+			list.add(Integer.parseInt(leitura));
+		}
+		
+		Escritor escreverTxt = new SaidaTxt("SaídaTxt", quantidadeDeNumeros);
+		Escritor escreverExcel = new SaidaExcel("SaídaExcel", quantidadeDeNumeros);
+		
+		System.out.println("Números digitados: " + list);
+		
+		escreverTxt.escreverSaida(quantidadeDeNumeros);
+		escreverExcel.escreverSaida(quantidadeDeNumeros);
+		
+
+	}
+
+}

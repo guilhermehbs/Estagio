@@ -1,0 +1,12 @@
+1649081676911	Rename method 'calculaMedia'
+1649082507172	Rename method 'registra'
+1649173423163	Delete element
+1649174347889	Extract method 'CriarCelulaDaTabela'
+1649174388723	Rename method 'CriarCelulaDaTabela'
+1649175570614	Rename field 'NOME_ARUQUIVO_DEFAULT'
+1649183958988	Rename local variable 'value'
+1649249802495	Rename local variable 'invalido'
+1649251455322	Extract method 'entradaDeDadosEValidacao'
+1649251956388	Rename type 'SaidaTxt'
+1649251976827	Rename type 'EscritaTxt'
+1649251996282	Rename type 'SaidaExcel'

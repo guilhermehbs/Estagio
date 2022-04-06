@@ -1,0 +1,14 @@
+package desafio;
+
+
+public abstract class Calculos {
+	
+	private int[] numeros;
+	private int contador;
+	
+	protected Calculos(int quantidadeDeNumeros) {
+		numeros = new int[quantidadeDeNumeros];
+		contador = 0;
+	}
+
+}

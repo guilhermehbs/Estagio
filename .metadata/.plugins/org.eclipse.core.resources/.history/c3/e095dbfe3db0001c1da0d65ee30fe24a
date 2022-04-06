@@ -1,0 +1,38 @@
+
+package desafio1;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+	public class SaidaTxt extends CalculoMedia implements EscreverArquivos {
+
+		@Override
+		public void ecreverTexto(String caminhoArquivo , String textoEscrito) {
+
+			try(
+				
+				FileWriter arquivo = new FileWriter(caminhoArquivo, false);
+				BufferedWriter buffer = new BufferedWriter(arquivo);
+				PrintWriter gravarArquivo = new PrintWriter(buffer);
+				){
+				
+				gravarArquivo.append(textoEscrito);
+				
+			}catch(IOException e) {
+				System.out.println("");
+			}
+		}
+		
+		public static void main(String[] args) throws IOException {
+			
+			ArrayList<Integer> list = Entrada.main(args);
+		    
+		    
+		    
+		    arquivo.close();
+		}	   
+}

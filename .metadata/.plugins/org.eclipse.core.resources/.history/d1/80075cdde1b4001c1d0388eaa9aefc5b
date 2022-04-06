@@ -1,0 +1,42 @@
+package desafio;
+
+import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Registra {
+
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+		int quantidadeDeNumeros = 5;
+		
+		Escritor[] escritores = {new SaidaTxt("saida", quantidadeDeNumeros), new SaidaExcel("saida", quantidadeDeNumeros)};
+		
+		System.out.println("Digite " + quantidadeDeNumeros + " numeros inteiros de 0 a 10:");
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		while (escritores[0].getContador() < quantidadeDeNumeros) {
+			boolean invalido = false;
+			
+			if (scanner.hasNextInt()) {
+				int valor = scanner.nextInt();
+				
+				if (valor >= 0 && valor <= 10) {
+					for (Escritor escritor : escritores) {
+						escritor.escreverSaida(valor);
+					}
+				} else {
+					invalido = true;
+				}
+			} else {
+				scanner.nextLine();
+				invalido = true;
+			}
+			
+			if (invalido) System.out.println("Valor invalido, tente um numero inteiro de 0 a 10");
+		}
+		
+		scanner.close();
+	}
+}

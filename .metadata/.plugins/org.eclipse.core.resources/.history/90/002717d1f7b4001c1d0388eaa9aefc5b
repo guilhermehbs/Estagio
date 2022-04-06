@@ -1,0 +1,26 @@
+package desafio;
+
+import java.io.IOException;
+
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.util.List;
+
+public class SaidaTxt extends Calculos implements Escritor {
+	
+	FileWriter arquivo;
+	PrintWriter gravarArquivo;
+	
+	protected SaidaTxt(String nomeArquivo, int quantidadeDeNumeros) throws IOException {
+		arquivo = new FileWriter(nomeArquivo + ".txt");
+		gravarArquivo = new PrintWriter(arquivo);
+	}
+
+	public void escreverSaida(List<Integer> numeros) throws IOException {
+		for (Integer num : numeros) {
+			gravarArquivo.println(num);
+		}
+		arquivo.close();
+	}
+
+}

@@ -1,0 +1,33 @@
+package desafio;
+
+import java.util.List;
+
+public abstract class Calculos {
+	
+	
+	
+//	private int[] numeros;
+//	private int contador;
+	
+//	protected Calculos(int quantidadeDeNumeros) {
+//		numeros = new int[quantidadeDeNumeros];
+//		contador = 0;
+//	}
+	
+//	protected void contador(int numero) {
+//		numeros[contador] = numero;
+//		contador++;
+//	}
+	
+	protected double calculaMedia(List<Integer> numeros) {
+		double soma = 0;
+		for (int numero : numeros) {
+			soma += numero;
+		}
+		return soma/numeros.size();
+	}
+//	protected int getContador() {
+//		return contador;
+//	}
+
+}
